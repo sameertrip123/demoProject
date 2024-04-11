@@ -25,11 +25,11 @@ public class CandidateService {
     }
 
     public Candidate getCandidateById(int id) throws CandidateNotFoundException {
-        Optional<Candidate> candidateOptional = candidateRepository.findById(id);
-        if (candidateOptional.isEmpty()) {
+        Optional<Candidate> candidate = candidateRepository.findById(id);
+        if (candidate.isEmpty()) {
             throw new CandidateNotFoundException("User not found with id " + id);
         }
-        return candidateOptional.get();
+        return candidate.get();
     }
 
 }
