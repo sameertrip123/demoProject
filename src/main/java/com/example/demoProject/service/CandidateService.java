@@ -31,5 +31,4 @@ public class CandidateService {
         }
         return candidate.get();
     }
-
 }
