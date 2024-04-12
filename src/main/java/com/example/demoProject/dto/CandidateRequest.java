@@ -1,9 +1,12 @@
 package com.example.demoProject.dto;
 
+import com.example.demoProject.repository.CandidateWorkHistoryRepository;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor(staticName = "build")
@@ -21,4 +24,7 @@ public class CandidateRequest {
     @NotNull
     @Pattern(regexp = "^\\d{10}$", message = "Invalid Mobile Number")
     private String contact;
+
+
+    private List<CandidateWorkHistoryRepository> workHistoryList;
 }

@@ -1,5 +1,6 @@
 package com.example.demoProject.entity;
 
+import java.util.List;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

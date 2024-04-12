@@ -16,6 +16,7 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class ApplicationExceptionHandler {
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleMethodArgumentNotValidException(MethodArgumentNotValidException exception) {
         Map<String, String> mp = new HashMap<>();
@@ -32,6 +33,5 @@ public class ApplicationExceptionHandler {
 
         mp.put("error", exception.getMessage());
         return CandidateResponse.generateResponse("Error", "is-fail", HttpStatus.BAD_REQUEST, null , mp);
-
     }
 }
